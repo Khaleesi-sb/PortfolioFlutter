@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600">
+    <rect width="900" height="200" fill="#FF9933"/>
+    <rect width="900" height="200" y="200" fill="#FFFFFF"/>
+    <rect width="900" height="200" y="400" fill="#138808"/>
+
+    <!-- Ashoka Chakra -->
+    <g transform="translate(450 300)">
+        <circle r="60" fill="none" stroke="#000080" stroke-width="4"/>
+        <circle r="4" fill="#000080"/>
+
+        <!-- 24 spokes -->
+        <g stroke="#000080" stroke-width="2">
+            <line x1="0" y1="-60" x2="0" y2="60"/>
+            <line x1="-60" y1="0" x2="60" y2="0"/>
+            <line x1="-42.4" y1="-42.4" x2="42.4" y2="42.4"/>
+            <line x1="-42.4" y1="42.4" x2="42.4" y2="-42.4"/>
+
+            <line x1="-15.5" y1="-58" x2="15.5" y2="58"/>
+            <line x1="15.5" y1="-58" x2="-15.5" y2="58"/>
+            <line x1="-58" y1="-15.5" x2="58" y2="15.5"/>
+            <line x1="-58" y1="15.5" x2="58" y2="-15.5"/>
+
+            <line x1="-30" y1="-52" x2="30" y2="52"/>
+            <line x1="30" y1="-52" x2="-30" y2="52"/>
+            <line x1="-52" y1="-30" x2="52" y2="30"/>
+            <line x1="-52" y1="30" x2="52" y2="-30"/>
+        </g>
+    </g>
+</svg>
