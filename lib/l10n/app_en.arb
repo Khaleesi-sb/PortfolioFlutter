@@ -4,5 +4,9 @@
   "skills" : "Skills",
   "projects" : "Projects",
   "blogs" : "Blogs",
-  "contact" : "Contact"
+  "contact" : "Contact",
+  "shilpa" : "Shilpa Bhattacharya",
+  "developer" : "Flutter Developer",
+  "developerDesc" : "Flutter Developer with 4.6 years of experience building scalable mobile applications across FinTech, BFSI, EdTech, and SaaS domains. Delivered products serving 20M+ downloads and 1M+ users, with expertise in Flutter, Dart, BLoC, Clean Architecture, payments, performance optimization, and AI-powered application development.",
+  "details" : "Details"
 }

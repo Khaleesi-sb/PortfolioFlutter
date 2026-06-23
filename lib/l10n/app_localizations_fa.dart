@@ -25,4 +25,17 @@ class AppLocalizationsFa extends AppLocalizations {
 
   @override
   String get contact => 'تماس';
+
+  @override
+  String get shilpa => 'شیلپا بَهتاچاریا';
+
+  @override
+  String get developer => 'توسعه‌دهنده فلاتر';
+
+  @override
+  String get developerDesc =>
+      'توسعه‌دهنده فلاتر با ۴.۶ سال تجربه در ساخت اپلیکیشن‌های موبایل مقیاس‌پذیر در حوزه‌های فین‌تک، بانکداری و خدمات مالی (BFSI)، فناوری آموزشی (EdTech) و SaaS. دارای سابقه ارائه محصولاتی با بیش از ۲۰ میلیون دانلود و ۱ میلیون کاربر، با تخصص در Flutter، Dart، BLoC، معماری پاک (Clean Architecture)، سیستم‌های پرداخت، بهینه‌سازی عملکرد و توسعه برنامه‌های مبتنی بر هوش مصنوعی.';
+
+  @override
+  String get details => 'جزئیات';
 }

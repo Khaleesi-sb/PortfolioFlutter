@@ -1,13 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-class AppBarDrawerIcon extends StatefulWidget {
+import '../../state/controllers/drawer_menu_controller.dart';
+
+class AppBarDrawerIcon extends ConsumerStatefulWidget {
   const AppBarDrawerIcon({super.key});
 
   @override
-  State<AppBarDrawerIcon> createState() => _AppBarDrawerIconState();
+  ConsumerState<AppBarDrawerIcon> createState() => _AppBarDrawerIconState();
 }
 
-class _AppBarDrawerIconState extends State<AppBarDrawerIcon>
+class _AppBarDrawerIconState extends ConsumerState<AppBarDrawerIcon>
     with SingleTickerProviderStateMixin {
   late AnimationController controller;
   late Animation<double> animation;
@@ -30,8 +33,10 @@ class _AppBarDrawerIconState extends State<AppBarDrawerIcon>
         setState(() {
           if (!isOpen) {
             controller.forward();
+            ref.read(drawerMenuControllerProvider.notifier).open();
           } else {
             controller.reverse();
+            ref.read(drawerMenuControllerProvider.notifier).close();
           }
           isOpen = !isOpen;
         });

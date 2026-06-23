@@ -34,7 +34,7 @@ final class AppThemeControllerProvider
 }
 
 String _$appThemeControllerHash() =>
-    r'681422a6c78343b3151f94957fe0cbe4b0718339';
+    r'c7915149106c91baa001f9edb87587776e103ded';
 
 abstract class _$AppThemeController extends $AsyncNotifier<ThemeMode> {
   FutureOr<ThemeMode> build();

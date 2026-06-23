@@ -25,4 +25,17 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get contact => 'Contact';
+
+  @override
+  String get shilpa => 'Shilpa Bhattacharya';
+
+  @override
+  String get developer => 'Flutter Developer';
+
+  @override
+  String get developerDesc =>
+      'Flutter Developer with 4.6 years of experience building scalable mobile applications across FinTech, BFSI, EdTech, and SaaS domains. Delivered products serving 20M+ downloads and 1M+ users, with expertise in Flutter, Dart, BLoC, Clean Architecture, payments, performance optimization, and AI-powered application development.';
+
+  @override
+  String get details => 'Details';
 }

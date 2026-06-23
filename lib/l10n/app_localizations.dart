@@ -135,6 +135,30 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Contact'**
   String get contact;
+
+  /// No description provided for @shilpa.
+  ///
+  /// In en, this message translates to:
+  /// **'Shilpa Bhattacharya'**
+  String get shilpa;
+
+  /// No description provided for @developer.
+  ///
+  /// In en, this message translates to:
+  /// **'Flutter Developer'**
+  String get developer;
+
+  /// No description provided for @developerDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'Flutter Developer with 4.6 years of experience building scalable mobile applications across FinTech, BFSI, EdTech, and SaaS domains. Delivered products serving 20M+ downloads and 1M+ users, with expertise in Flutter, Dart, BLoC, Clean Architecture, payments, performance optimization, and AI-powered application development.'**
+  String get developerDesc;
+
+  /// No description provided for @details.
+  ///
+  /// In en, this message translates to:
+  /// **'Details'**
+  String get details;
 }
 
 class _AppLocalizationsDelegate

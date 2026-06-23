@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import 'features/home/presentation/screens/home_page.dart';
 import 'l10n/app_localizations.dart';
 import 'styles/app_theme.dart';
-import 'views/screens/home_page.dart';
 import 'views/state/controllers/app_locale_controller.dart';
 import 'views/state/controllers/app_theme_controller.dart';
 
