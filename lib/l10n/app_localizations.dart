@@ -159,6 +159,336 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Details'**
   String get details;
+
+  /// No description provided for @poweredByFlutter.
+  ///
+  /// In en, this message translates to:
+  /// **'Powered by Flutter'**
+  String get poweredByFlutter;
+
+  /// No description provided for @projectsDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'A collection of apps and products that reflect my passion for building performant, scalable, and user-centric mobile experiences.'**
+  String get projectsDesc;
+
+  /// No description provided for @experiences.
+  ///
+  /// In en, this message translates to:
+  /// **'Experiences'**
+  String get experiences;
+
+  /// No description provided for @experiencesDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'My professional journey, highlighting the roles, responsibilities, and achievements that have shaped my expertise in software development.'**
+  String get experiencesDesc;
+
+  /// No description provided for @recommendation.
+  ///
+  /// In en, this message translates to:
+  /// **'Recommendation'**
+  String get recommendation;
+
+  /// No description provided for @recommendationDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'A collection of recommendations highlighting my technical skills, teamwork, and professional growth.'**
+  String get recommendationDesc;
+
+  /// No description provided for @skillsDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'A comprehensive overview of my technical skills, tools, and technologies I use to build scalable and efficient applications.'**
+  String get skillsDesc;
+
+  /// No description provided for @programmingLanguage.
+  ///
+  /// In en, this message translates to:
+  /// **'Programming Language'**
+  String get programmingLanguage;
+
+  /// No description provided for @linkedin.
+  ///
+  /// In en, this message translates to:
+  /// **'LinkedIn'**
+  String get linkedin;
+
+  /// No description provided for @github.
+  ///
+  /// In en, this message translates to:
+  /// **'GitHub'**
+  String get github;
+
+  /// No description provided for @instagram.
+  ///
+  /// In en, this message translates to:
+  /// **'Instagram'**
+  String get instagram;
+
+  /// No description provided for @email.
+  ///
+  /// In en, this message translates to:
+  /// **'Email'**
+  String get email;
+
+  /// No description provided for @message.
+  ///
+  /// In en, this message translates to:
+  /// **'Message'**
+  String get message;
+
+  /// No description provided for @send.
+  ///
+  /// In en, this message translates to:
+  /// **'Send'**
+  String get send;
+
+  /// No description provided for @frontend.
+  ///
+  /// In en, this message translates to:
+  /// **'Frontend'**
+  String get frontend;
+
+  /// No description provided for @backend.
+  ///
+  /// In en, this message translates to:
+  /// **'Backend'**
+  String get backend;
+
+  /// No description provided for @ai.
+  ///
+  /// In en, this message translates to:
+  /// **'AI'**
+  String get ai;
+
+  /// No description provided for @dart.
+  ///
+  /// In en, this message translates to:
+  /// **'Dart'**
+  String get dart;
+
+  /// No description provided for @kotlin.
+  ///
+  /// In en, this message translates to:
+  /// **'Kotlin'**
+  String get kotlin;
+
+  /// No description provided for @java.
+  ///
+  /// In en, this message translates to:
+  /// **'Java'**
+  String get java;
+
+  /// No description provided for @flutter.
+  ///
+  /// In en, this message translates to:
+  /// **'Flutter'**
+  String get flutter;
+
+  /// No description provided for @bloc.
+  ///
+  /// In en, this message translates to:
+  /// **'BLoC'**
+  String get bloc;
+
+  /// No description provided for @cubit.
+  ///
+  /// In en, this message translates to:
+  /// **'Cubit'**
+  String get cubit;
+
+  /// No description provided for @figma.
+  ///
+  /// In en, this message translates to:
+  /// **'Figma'**
+  String get figma;
+
+  /// No description provided for @devtool.
+  ///
+  /// In en, this message translates to:
+  /// **'Dev Tools'**
+  String get devtool;
+
+  /// No description provided for @inspector.
+  ///
+  /// In en, this message translates to:
+  /// **'Inspector'**
+  String get inspector;
+
+  /// No description provided for @platformChannel.
+  ///
+  /// In en, this message translates to:
+  /// **'Platform Channel'**
+  String get platformChannel;
+
+  /// No description provided for @mvvm.
+  ///
+  /// In en, this message translates to:
+  /// **'MVVM'**
+  String get mvvm;
+
+  /// No description provided for @mvc.
+  ///
+  /// In en, this message translates to:
+  /// **'MVC'**
+  String get mvc;
+
+  /// No description provided for @cleanArchitecture.
+  ///
+  /// In en, this message translates to:
+  /// **'Clean Architecture'**
+  String get cleanArchitecture;
+
+  /// No description provided for @solid.
+  ///
+  /// In en, this message translates to:
+  /// **'SOLID'**
+  String get solid;
+
+  /// No description provided for @responsive.
+  ///
+  /// In en, this message translates to:
+  /// **'Responsive UI'**
+  String get responsive;
+
+  /// No description provided for @stateManagement.
+  ///
+  /// In en, this message translates to:
+  /// **'State Management'**
+  String get stateManagement;
+
+  /// No description provided for @performanceOptimise.
+  ///
+  /// In en, this message translates to:
+  /// **'Performance Optimization'**
+  String get performanceOptimise;
+
+  /// No description provided for @tdd.
+  ///
+  /// In en, this message translates to:
+  /// **'TDD'**
+  String get tdd;
+
+  /// No description provided for @firebase.
+  ///
+  /// In en, this message translates to:
+  /// **'Firebase'**
+  String get firebase;
+
+  /// No description provided for @hive.
+  ///
+  /// In en, this message translates to:
+  /// **'Hive'**
+  String get hive;
+
+  /// No description provided for @sqlite.
+  ///
+  /// In en, this message translates to:
+  /// **'SQLite'**
+  String get sqlite;
+
+  /// No description provided for @mySql.
+  ///
+  /// In en, this message translates to:
+  /// **'MySQL'**
+  String get mySql;
+
+  /// No description provided for @api.
+  ///
+  /// In en, this message translates to:
+  /// **'API'**
+  String get api;
+
+  /// No description provided for @payment.
+  ///
+  /// In en, this message translates to:
+  /// **'Payment Integration'**
+  String get payment;
+
+  /// No description provided for @di.
+  ///
+  /// In en, this message translates to:
+  /// **'Dependency Injection'**
+  String get di;
+
+  /// No description provided for @postman.
+  ///
+  /// In en, this message translates to:
+  /// **'Postman'**
+  String get postman;
+
+  /// No description provided for @git.
+  ///
+  /// In en, this message translates to:
+  /// **'Git'**
+  String get git;
+
+  /// No description provided for @openAi.
+  ///
+  /// In en, this message translates to:
+  /// **'OpenAI'**
+  String get openAi;
+
+  /// No description provided for @claude.
+  ///
+  /// In en, this message translates to:
+  /// **'Claude'**
+  String get claude;
+
+  /// No description provided for @gemini.
+  ///
+  /// In en, this message translates to:
+  /// **'Gemini'**
+  String get gemini;
+
+  /// No description provided for @chatbot.
+  ///
+  /// In en, this message translates to:
+  /// **'Chatbot'**
+  String get chatbot;
+
+  /// No description provided for @prompt.
+  ///
+  /// In en, this message translates to:
+  /// **'Prompt Engineering'**
+  String get prompt;
+
+  /// No description provided for @frameworks.
+  ///
+  /// In en, this message translates to:
+  /// **'Frameworks'**
+  String get frameworks;
+
+  /// No description provided for @architecture.
+  ///
+  /// In en, this message translates to:
+  /// **'Architecture'**
+  String get architecture;
+
+  /// No description provided for @ui.
+  ///
+  /// In en, this message translates to:
+  /// **'UI'**
+  String get ui;
+
+  /// No description provided for @database.
+  ///
+  /// In en, this message translates to:
+  /// **'Database'**
+  String get database;
+
+  /// No description provided for @integration.
+  ///
+  /// In en, this message translates to:
+  /// **'Integration'**
+  String get integration;
+
+  /// No description provided for @aiTools.
+  ///
+  /// In en, this message translates to:
+  /// **'AI Tools'**
+  String get aiTools;
 }
 
 class _AppLocalizationsDelegate

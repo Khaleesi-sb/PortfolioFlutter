@@ -12,6 +12,8 @@ class Insets{
 abstract class AppInsets {
   double get padding;
   double get appBarHeight;
+  double get cardPadding;
+  double get gap;
 }
 
 class LargeInsets extends AppInsets{
@@ -20,6 +22,12 @@ class LargeInsets extends AppInsets{
 
   @override
   double get appBarHeight => 64;
+
+  @override
+  double get cardPadding => Insets.xl;
+
+  @override
+  double get gap => 100;
 }
 
 class SmallInsets extends AppInsets{
@@ -28,4 +36,10 @@ class SmallInsets extends AppInsets{
 
   @override
   double get appBarHeight => 56;
+
+  @override
+  double get cardPadding => Insets.lg;
+
+  @override
+  double get gap => 72;
 }

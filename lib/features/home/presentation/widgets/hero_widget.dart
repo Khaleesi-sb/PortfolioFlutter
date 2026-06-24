@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:my_portfolio/views/widgets/powered_by_flutter.dart';
 
 import '../../../../helper/extensions/context_extensions.dart';
 import '../../../../styles/app_size.dart';
@@ -13,11 +14,12 @@ class HeroWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      mainAxisSize: MainAxisSize.min,
       children: [
-        Text("Flutter"),
+        const PoweredByFlutter(),
         context.isMobile
-            ? Expanded(child: _SmallHero())
-            : Expanded(child: _LargeHero()),
+            ? const _SmallHero()
+            : const _LargeHero(),
       ],
     );
   }
@@ -31,16 +33,14 @@ class _SmallHero extends StatelessWidget {
     return Column(
       mainAxisSize: MainAxisSize.min,
       children: [
-        Flexible(
-          child: ConstrainedBox(
-            constraints: BoxConstraints(maxWidth: 140),
-            child: HeroImage(),
-          ),
+        ConstrainedBox(
+          constraints: BoxConstraints(maxWidth: 140),
+          child: const HeroImage(),
         ),
         Gap(Insets.xl),
-        Flexible(child: HeroText()),
+        const HeroText(),
         Gap(Insets.xxl),
-        Flexible(child: SmallHeroButtons()),
+        const SmallHeroButtons(),
       ],
     );
   }
@@ -56,16 +56,15 @@ class _LargeHero extends StatelessWidget {
       children: [
         Flexible(child: HeroImage()),
         Gap(Insets.xxl),
-        Flexible(
-          flex: 2,
+        Expanded(
           child: Column(
             mainAxisSize: MainAxisSize.min,
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Flexible(child: HeroText()),
+              HeroText(),
               Gap(Insets.xxl),
-              Flexible(child: LargeHeroButtons()),
+              LargeHeroButtons(),
             ],
           ),
         ),

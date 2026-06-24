@@ -10,7 +10,7 @@ class AppBarSmallMenus extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
+    return Column(
         children: AppMenuList.getItem(context)
             .map((AppMenu menu) => SmallAppBarMenuItem(
             title: menu.title,

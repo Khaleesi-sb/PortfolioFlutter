@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_portfolio/features/skills/presentation/screens/skills.dart';
 
 import '../../../helper/constants/app_menu_list.dart';
 import '../../../styles/app_size.dart';
@@ -17,6 +18,10 @@ class AppBarLargeMenus extends StatelessWidget {
           isSelected: true,
           onTap: (){
             // TODO: add functionality
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => const SkillsPage()),
+            );
           }
       )).toList()
     );

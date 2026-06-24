@@ -17,36 +17,30 @@ class HeroText extends StatelessWidget {
       CrossAxisAlignment.center,
       mainAxisSize: MainAxisSize.min,
       children: [
-        Flexible(
-          child: SEOText(text: context.texts.shilpa,
-            textAlign: context.isDesktopOrTablet ? TextAlign.left : TextAlign.center,
-            textStyle: context.textStyles.titleLgBold.copyWith(
-              color: context.colorScheme.onBackground
-            ),
-            textRendererStyle: TextRendererStyle.header1,
+        SEOText(text: context.texts.shilpa,
+          textAlign: context.isDesktopOrTablet ? TextAlign.left : TextAlign.center,
+          textStyle: context.textStyles.titleLgBold.copyWith(
+            color: context.colorScheme.onSurface
           ),
+          textRendererStyle: TextRendererStyle.header1,
         ),
         Gap(Insets.sm),
-        Flexible(
-          child: SEOText(
-          text: context.texts.developer,
-            textAlign: context.isDesktopOrTablet ? TextAlign.left : TextAlign.center,
-            textStyle: context.textStyles.titleMdMedium.copyWith(
-              color: context.colorScheme.onBackground
-            ),
-            textRendererStyle: TextRendererStyle.header2,
+        SEOText(
+        text: context.texts.developer,
+          textAlign: context.isDesktopOrTablet ? TextAlign.left : TextAlign.center,
+          textStyle: context.textStyles.titleMdMedium.copyWith(
+            color: context.colorScheme.onSurface
           ),
+          textRendererStyle: TextRendererStyle.header2,
         ),
         Gap(Insets.lg),
-        Flexible(
-          child: SEOText(
-            text: context.texts.developerDesc,
-            textAlign: context.isDesktopOrTablet ? TextAlign.left : TextAlign.center,
-            textStyle: context.textStyles.titleMdMedium.copyWith(
-                color: context.colorScheme.onSurface
-            ),
-            textRendererStyle: TextRendererStyle.header3,
+        SEOText(
+          text: context.texts.developerDesc,
+          textAlign: context.isDesktopOrTablet ? TextAlign.left : TextAlign.center,
+          textStyle: context.textStyles.titleMdMedium.copyWith(
+              color: context.colorScheme.onSurface
           ),
+          textRendererStyle: TextRendererStyle.header3,
         ),
       ],
     );

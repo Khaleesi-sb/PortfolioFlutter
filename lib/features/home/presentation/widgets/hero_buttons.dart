@@ -29,21 +29,17 @@ class SmallHeroButtons extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Flexible(
-          child: SizedBox(
-            width: double.infinity,
-            child: PrimaryButton(onPressed: () {
-              // todo: add functionality
-            }, title: context.texts.details,),
-          ),
+        SizedBox(
+          width: double.infinity,
+          child: PrimaryButton(onPressed: () {
+            // todo: add functionality
+          }, title: context.texts.details,),
         ),
         Gap(Insets.lg),
-        Flexible(
-          child: SizedBox(
-            width: double.infinity,
-            child: OutlineButton(
-              title: context.texts.contact,
-            ),
+        SizedBox(
+          width: double.infinity,
+          child: OutlineButton(
+            title: context.texts.contact,
           ),
         )
       ],
