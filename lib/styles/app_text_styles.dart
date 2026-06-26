@@ -59,5 +59,5 @@ class LargeTextStyles extends AppTextStyles {
 
   @override
   TextStyle get titleLgBold =>
-      TextStyle(fontSize: 26, fontWeight: FontWeight.bold);
+      TextStyle(fontSize: 24, fontWeight: FontWeight.bold);
 }

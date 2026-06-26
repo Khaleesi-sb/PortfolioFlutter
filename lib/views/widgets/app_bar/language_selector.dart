@@ -30,19 +30,21 @@ class LanguageSelector extends ConsumerWidget {
         ),
         PopupMenuItem(
           value: 1,
-          child: PopupLanguageSwitchItem(
-            language: "فارسی",
-            icon: AppIcon.ir,
-          ),
+          child: PopupLanguageSwitchItem(language: "فارسی", icon: AppIcon.ir),
         ),
       ],
       onSelected: (int val) {
-        ref.read(appLocaleControllerProvider.notifier)
+        ref
+            .read(appLocaleControllerProvider.notifier)
             .changeLocale(val == 0 ? 'en' : 'fa');
       },
       child: Row(
         children: [
-          Icon(Icons.language, color: context.colorScheme.onSurface),
+          Icon(
+            Icons.language,
+            color: context.colorScheme.onSurface,
+            size: context.insets.iconSize,
+          ),
           const Gap(4),
           SEOText(text: locale == 'en' ? 'En' : 'فارسی'),
         ],

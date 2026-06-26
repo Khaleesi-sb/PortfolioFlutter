@@ -5,10 +5,16 @@ import '../../helper/extensions/context_extensions.dart';
 import 'app_bar/seo_text.dart';
 
 class HomeTitleSubtitle extends StatelessWidget {
-  const HomeTitleSubtitle({super.key, required this.title, required this.subtitle});
+  const HomeTitleSubtitle({
+    super.key,
+    required this.title,
+    this.subtitle,
+    this.hasSubTitle = true,
+  });
 
   final String title;
-  final String subtitle;
+  final String? subtitle;
+  final bool hasSubTitle;
 
   @override
   Widget build(BuildContext context) {
@@ -24,13 +30,14 @@ class HomeTitleSubtitle extends StatelessWidget {
             ),
             textRendererStyle: TextRendererStyle.header3,
           ),
-          SEOText(
-            text: subtitle,
-            textStyle: context.textStyles.bodyMdMedium.copyWith(
-              color: context.colorScheme.onBackground,
+          if (hasSubTitle)
+            SEOText(
+              text: subtitle ?? "",
+              textStyle: context.textStyles.bodyMdMedium.copyWith(
+                color: context.colorScheme.onBackground,
+              ),
+              textRendererStyle: TextRendererStyle.header4,
             ),
-            textRendererStyle: TextRendererStyle.header4,
-          ),
         ],
       ),
     );

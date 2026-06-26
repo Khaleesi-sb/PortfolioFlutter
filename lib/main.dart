@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:my_portfolio/routes/app_routes.dart';
 
 import 'features/home/presentation/screens/home_page.dart';
 import 'l10n/app_localizations.dart';
@@ -9,6 +11,16 @@ import 'views/state/controllers/app_locale_controller.dart';
 import 'views/state/controllers/app_theme_controller.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  SystemChrome.setEnabledSystemUIMode(
+    SystemUiMode.edgeToEdge,
+  );
+  SystemChrome.setSystemUIOverlayStyle(
+    const SystemUiOverlayStyle(
+      statusBarColor: Colors.transparent,
+      systemNavigationBarColor: Colors.transparent,
+    ),
+  );
   runApp(ProviderScope(child: const App()));
 }
 
@@ -19,7 +31,8 @@ class App extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final locale = ref.watch(appLocaleControllerProvider);
     final theme = ref.watch(appThemeControllerProvider);
-    return MaterialApp(
+    return MaterialApp.router(
+      routerConfig: AppRoutes.router,
       localizationsDelegates: const [
         AppLocalizations.delegate,
         GlobalMaterialLocalizations.delegate,
@@ -35,7 +48,6 @@ class App extends ConsumerWidget {
       darkTheme: AppTheme(fontFamily: _fontsFamily(locale.value)).dark,
       theme: AppTheme(fontFamily: _fontsFamily(locale.value)).light,
       themeMode: theme.value ?? ThemeMode.light,
-      home: const HomePage(),
       debugShowCheckedModeBanner: false,
     );
   }

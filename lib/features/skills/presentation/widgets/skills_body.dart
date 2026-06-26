@@ -20,18 +20,15 @@ class SkillsBody extends StatelessWidget {
     return Column(
       children: [
         for (final skill in skills)
-          Padding(
-            padding: EdgeInsets.symmetric(horizontal: context.insets.padding),
-            child: context.isDesktopOrTablet
-                ? _DesktopSkillItem(
-              sectionName: skill.sectionName,
-              cardContent: skill.skills,
-            )
-                :  _MobileSkillItem(
-              sectionName: skill.sectionName,
-              cardContent: skill.skills,
-            ),
-          ),
+          context.isDesktopOrTablet
+              ? _DesktopSkillItem(
+                  sectionName: skill.sectionName,
+                  cardContent: skill.skills,
+                )
+              : _MobileSkillItem(
+                  sectionName: skill.sectionName,
+                  cardContent: skill.skills,
+                ),
       ],
     );
   }
@@ -54,16 +51,20 @@ class _DesktopSkillItem extends StatelessWidget {
       children: [
         SectionBadge(label: sectionName),
         const Gap(16),
-        MasonryGridView.count(
-          shrinkWrap: true,
-          physics: const NeverScrollableScrollPhysics(),
-          itemCount: cardContent.length,
-          crossAxisCount: context.isDesktop ? 3 : 2,
-          crossAxisSpacing: 16,
-          mainAxisSpacing: 16,
-          itemBuilder: (context, index) {
-            return SkillsCard(cardContent: cardContent[index]);
-          },
+        Center(
+          child: MasonryGridView.count(
+            shrinkWrap: true,
+            physics: const NeverScrollableScrollPhysics(),
+            itemCount: cardContent.length,
+            crossAxisCount: context.isDesktop
+                ? (cardContent.length >= 3 ? 3 : cardContent.length)
+                : (cardContent.length >= 2 ? 2 : cardContent.length),
+            crossAxisSpacing: 16,
+            mainAxisSpacing: 16,
+            itemBuilder: (context, index) {
+              return SkillsCard(cardContent: cardContent[index]);
+            },
+          ),
         ),
         const Gap(16),
         // const Divider(height: 24),
@@ -73,7 +74,10 @@ class _DesktopSkillItem extends StatelessWidget {
 }
 
 class _MobileSkillItem extends StatelessWidget {
-  const _MobileSkillItem({super.key, required this.sectionName, required this.cardContent});
+  const _MobileSkillItem({
+    required this.sectionName,
+    required this.cardContent,
+  });
 
   final String sectionName;
   final List<Skills> cardContent;
@@ -92,8 +96,7 @@ class _MobileSkillItem extends StatelessWidget {
           );
         }),
         const Gap(16),
-      ]
+      ],
     );
   }
 }
-

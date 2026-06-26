@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 
 import '../../../../helper/extensions/context_extensions.dart';
-import '../../../../views/widgets/home_title_subtitle.dart';
 import '../../../../views/widgets/styled_card.dart';
 
 const expLen = 6;
@@ -19,11 +18,11 @@ class ExperienceBody extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        HomeTitleSubtitle(
-          title: context.texts.experiences,
-          subtitle: context.texts.experiencesDesc,
-        ),
-        Gap(32),
+        // HomeTitleSubtitle(
+        //   title: context.texts.experiences,
+        //   subtitle: context.texts.experiencesDesc,
+        // ),
+        // Gap(32),
         context.isDesktop
             ? const DesktopExperiencesBody()
             : const MobileExperiencesBody(),

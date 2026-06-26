@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
 import 'package:my_portfolio/views/state/controllers/drawer_menu_controller.dart';
 
 import '../../../helper/constants/app_menu_list.dart';
@@ -32,14 +33,29 @@ class _DrawerMenuState extends ConsumerState<DrawerMenu>
   }
 
   @override
+  void initState() {
+    super.initState();
+    ref.listenManual(
+      drawerMenuControllerProvider,
+          (previous, next) {
+        if (next.value == true) {
+          _controller.forward();
+        } else {
+          _controller.reverse();
+        }
+      },
+    );
+  }
+
+  @override
   Widget build(BuildContext context) {
-    ref.listen(drawerMenuControllerProvider, (previous, next) {
-      if (next.value==true) {
-        _controller.forward();
-      } else {
-        _controller.reverse();
-      }
-    });
+    // ref.listen(drawerMenuControllerProvider, (previous, next) {
+    //   if (next.value==true) {
+    //     _controller.forward();
+    //   } else {
+    //     _controller.reverse();
+    //   }
+    // });
     return ClipRRect(
       child: SlideTransition(
         position: _animation,
@@ -62,18 +78,21 @@ class _DrawerMenuState extends ConsumerState<DrawerMenu>
   }
 }
 
-class SmallMenu extends StatelessWidget {
+class SmallMenu extends ConsumerWidget {
   const SmallMenu({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     return Column(
       children: AppMenuList.getItem(context)
           .map(
-            (e) => LargeAppBarMenuItem(
-              title: e.title,
+            (menu) => LargeAppBarMenuItem(
+              title: menu.title,
               isSelected: true,
-              onTap: () {},
+              onTap: () {
+                ref.read(drawerMenuControllerProvider.notifier).close();
+                GoRouter.of(context).go(menu.path);
+              },
             ),
           )
           .toList(),

@@ -27,7 +27,10 @@ class AppLocalizationsEn extends AppLocalizations {
   String get contact => 'Contact';
 
   @override
-  String get shilpa => 'Shilpa Bhattacharya';
+  String get shilpa_bhattacharya => 'Shilpa Bhattacharya';
+
+  @override
+  String get shilpa => 'Shilpa';
 
   @override
   String get developer => 'Flutter Developer';

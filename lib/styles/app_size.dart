@@ -14,6 +14,7 @@ abstract class AppInsets {
   double get appBarHeight;
   double get cardPadding;
   double get gap;
+  double get iconSize;
 }
 
 class LargeInsets extends AppInsets{
@@ -28,6 +29,9 @@ class LargeInsets extends AppInsets{
 
   @override
   double get gap => 100;
+
+  @override
+  double get iconSize => 32;
 }
 
 class SmallInsets extends AppInsets{
@@ -42,4 +46,8 @@ class SmallInsets extends AppInsets{
 
   @override
   double get gap => 72;
+
+  @override
+  double get iconSize => 22;
+
 }

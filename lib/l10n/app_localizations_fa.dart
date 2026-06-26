@@ -27,7 +27,10 @@ class AppLocalizationsFa extends AppLocalizations {
   String get contact => 'تماس';
 
   @override
-  String get shilpa => 'شیلپا بَهتاچاریا';
+  String get shilpa_bhattacharya => 'شیلپا بهاتاچاریا';
+
+  @override
+  String get shilpa => 'شیلپا';
 
   @override
   String get developer => 'توسعه‌دهنده فلاتر';

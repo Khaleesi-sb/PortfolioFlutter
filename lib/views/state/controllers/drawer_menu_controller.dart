@@ -6,7 +6,7 @@ part 'drawer_menu_controller.g.dart';
 class DrawerMenuController extends _$DrawerMenuController{
 
   @override
-  FutureOr<bool> build() {
+  FutureOr<bool> build() async{
     return false;
   }
 

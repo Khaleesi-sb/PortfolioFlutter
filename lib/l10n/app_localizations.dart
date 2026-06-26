@@ -136,10 +136,16 @@ abstract class AppLocalizations {
   /// **'Contact'**
   String get contact;
 
-  /// No description provided for @shilpa.
+  /// No description provided for @shilpa_bhattacharya.
   ///
   /// In en, this message translates to:
   /// **'Shilpa Bhattacharya'**
+  String get shilpa_bhattacharya;
+
+  /// No description provided for @shilpa.
+  ///
+  /// In en, this message translates to:
+  /// **'Shilpa'**
   String get shilpa;
 
   /// No description provided for @developer.

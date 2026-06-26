@@ -29,7 +29,7 @@ class MyAppBar extends StatelessWidget{
             ),
             child: Row(
               children: [
-                AppLogo(),
+                AppLogo(isShort: true,),
                 Spacer(),
                 if(context.isDesktop) AppBarLargeMenus(),
                 Spacer(),

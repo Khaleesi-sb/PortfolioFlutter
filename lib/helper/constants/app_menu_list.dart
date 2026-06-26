@@ -5,12 +5,12 @@ import 'package:my_portfolio/routes/app_routes.dart';
 class AppMenuList {
   static List<AppMenu> getItem(BuildContext context){
     return [
-      AppMenu(title: context.texts.home, path: AppRoutes.home),
+      AppMenu(title: context.texts.home, path: Routes.home),
       // AppMenu(title: context.texts.about, path: AppRoutes.about),
-      AppMenu(title: context.texts.skills, path: AppRoutes.skills),
-      AppMenu(title: context.texts.projects, path: AppRoutes.projects),
+      AppMenu(title: context.texts.skills, path: Routes.skills),
+      AppMenu(title: context.texts.projects, path: Routes.projects),
       // AppMenu(title: context.texts.blogs, path: AppRoutes.blogs),
-      AppMenu(title: context.texts.contact, path: AppRoutes.contact),
+      AppMenu(title: context.texts.contact, path: Routes.contact),
     ];
   }
 }
