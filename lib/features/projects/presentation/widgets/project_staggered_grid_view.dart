@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 
+import '../../../../helper/extensions/context_extensions.dart';
 import '../../../../views/widgets/styled_card.dart';
 import '../../../skills/presentation/widgets/skill_tag.dart';
 
@@ -48,7 +49,11 @@ class ProjectStaggeredGridView extends StatelessWidget {
       ),
     ];
     return MasonryGridView.count(
-      crossAxisCount: 3,
+      crossAxisCount: context.isDesktop
+          ? (projects.length >= 3 ? 3 : projects.length)
+          : context.isTablet
+          ? (projects.length >= 2 ? 2 : projects.length)
+          : 1,
       mainAxisSpacing: 20,
       crossAxisSpacing: 20,
       shrinkWrap: true,
@@ -92,9 +97,9 @@ class _ProjectCard extends StatelessWidget {
             ),
           Text(
             project.title,
-            style: Theme.of(context).textTheme.titleLarge?.copyWith(
-              fontWeight: FontWeight.w700,
-            ),
+            style: Theme.of(
+              context,
+            ).textTheme.titleLarge?.copyWith(fontWeight: FontWeight.w700),
           ),
           const SizedBox(height: 12),
           Text(project.description),
@@ -103,10 +108,12 @@ class _ProjectCard extends StatelessWidget {
             spacing: 8,
             runSpacing: 8,
             children: project.skills
-                .map((skill) => SkillTag(
-              label: skill,
-              featured: project.featured ?? false,
-            ))
+                .map(
+                  (skill) => SkillTag(
+                    label: skill,
+                    featured: project.featured ?? false,
+                  ),
+                )
                 .toList(),
           ),
         ],

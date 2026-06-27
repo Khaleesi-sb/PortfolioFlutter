@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_portfolio/helper/extensions/context_extensions.dart';
 
 import '../../../../styles/app_colors.dart';
 
@@ -63,7 +64,7 @@ class _SkillTagState extends State<SkillTag> {
         ),
         child: Text(
           widget.label,
-          style: TextStyle(
+          style: context.textStyles.titleSmBold.copyWith(
             color: isActive
                 ? activeText
                 : inactiveText,

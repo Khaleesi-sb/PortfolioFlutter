@@ -18,6 +18,7 @@ class ProjectPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return AppScaffold(
       slivers: [
+        SliverGap(context.insets.appBarHeight),
         SliverToBoxAdapter(
           child: Center(
             child: Container(
@@ -26,7 +27,7 @@ class ProjectPage extends StatelessWidget {
             ),
           ),
         ),
-        SliverGap(context.insets.appBarHeight),
+        SliverGap(32),
         SliverToBoxAdapter(
           child: Center(
             child: Container(
@@ -43,6 +44,7 @@ class ProjectPage extends StatelessWidget {
             ),
           ),
         ),
+        SliverGap(32),
       ],
     );
   }

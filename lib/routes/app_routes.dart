@@ -17,13 +17,26 @@ class Routes {
 class AppRoutes {
   static final router = GoRouter(
     routes: [
-      GoRoute(path: Routes.home, builder: (context, state) => const HomePage()),
+      GoRoute(
+        path: Routes.home,
+        pageBuilder: (context, state) =>
+            const NoTransitionPage(child: HomePage()),
+      ),
       GoRoute(
         path: Routes.skills,
-        builder: (context, state) => const SkillsPage(),
+        pageBuilder: (context, state) =>
+            const NoTransitionPage(child: SkillsPage()),
       ),
-      GoRoute(path: Routes.projects, builder: (context, state) => const ProjectPage()),
-      GoRoute(path: Routes.contact, builder: (context, state) => const ContactPage()),
+      GoRoute(
+        path: Routes.projects,
+        pageBuilder: (context, state) =>
+            const NoTransitionPage(child: ProjectPage()),
+      ),
+      GoRoute(
+        path: Routes.contact,
+        pageBuilder: (context, state) =>
+            const NoTransitionPage(child: ContactPage()),
+      ),
     ],
   );
 }

@@ -4,6 +4,7 @@ import 'package:go_router/go_router.dart';
 import 'package:my_portfolio/features/skills/presentation/screens/skills_page.dart';
 
 import '../../../helper/constants/app_menu_list.dart';
+import '../../../helper/extensions/context_extensions.dart';
 import '../../../styles/app_size.dart';
 import '../../../styles/app_text_styles.dart';
 import '../../state/controllers/drawer_menu_controller.dart';
@@ -18,7 +19,7 @@ class AppBarLargeMenus extends ConsumerWidget {
       children: AppMenuList.getItem(context)
           .map((AppMenu menu) => LargeAppBarMenuItem(
           title: menu.title,
-          isSelected: true,
+          isSelected: GoRouterState.of(context).fullPath == menu.path,
           onTap: (){
             ref.read(drawerMenuControllerProvider.notifier).close();
             GoRouter.of(context).go(menu.path);
@@ -41,7 +42,11 @@ class LargeAppBarMenuItem extends StatelessWidget {
       child: Padding(padding: EdgeInsets.symmetric(
           vertical: Insets.xs,
           horizontal: Insets.med),
-        child: Text(title, style: SmallTextStyles().bodyLgMedium,),
+        child: Text(title, style: SmallTextStyles().bodyLgMedium.copyWith(
+          color: isSelected ?
+          context.colorScheme.onBackground :
+          context.colorScheme.onSurface,
+        )),
       ),
     );
   }

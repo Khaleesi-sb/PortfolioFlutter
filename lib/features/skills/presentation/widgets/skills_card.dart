@@ -32,7 +32,7 @@ class SkillsCard extends StatelessWidget {
               Text(
                 cardContent.label,
                 style: context.textStyles.bodyMdMedium.copyWith(
-                  color: AppColors.gray[100],
+                  color: context.colorScheme.onBackground,
                 ),
               ),
             ],
