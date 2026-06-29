@@ -33,7 +33,7 @@ class ProjectStaggeredGridView extends StatelessWidget {
         title: 'Task Manager',
         description:
             'A clean productivity app with task grouping, reminders, and local persistence.',
-        skills: ['Flutter', 'Hive', 'State Management'],
+        skills: ['Flutter', 'Dart', 'State Management'],
         crossAxisCellCount: 1,
         mainAxisCellCount: 1.1,
       ),
